@@ -25,9 +25,9 @@ I pulled all the stocks in the S&P 500 and downloaded one year of daily price da
 | Event | Next Day (avg) | Next Day (up %) | Next Week (avg) | Next Week (up %) |
 |---|---|---|---|---|
 | 10%+ Gain | +0.58% | 52.2% | +1.47% | 55.1% |
-| 10%+ Drop | +0.79% | 56.3% | +1.96% | 58.5% |
+| 10%+ Drop | +0.81% | 56.7% | +2.00% | 58.9% |
 
-After a 10%+ drop, stocks went up **58.5% of the time** over the following week, with a mean return of 1.96%. That fact was my core finding.
+After a 10%+ drop, stocks went up **58.9% of the time** over the following week, with a mean return of 2.00%. That fact was my core finding.
 
 ---
 
@@ -44,20 +44,20 @@ By the way, if anyone wants something cool to look into, I found that of the Ind
 Before treating this as a tradeable signal, I needed to confirm it wasn't just luck. I ran a binomial test against a null hypothesis of 50%:
 
 ```
-n = 229 drop events
-Up = 134 (58.5%)
-p-value = 0.0119
-95% CI = [0.518, 0.650]
+n = 231 drop events
+Up = 136 (58.9%)
+p-value = 0.0084  
+95% CI = [0.522, 0.653]
 ```
 
-The p-value of 0.0119 is well below the standard 0.05 significance threshold used by actual scientists, meaning there's roughly only a 1.2% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
+The p-value of 0.0084 is well below the standard 0.05 significance threshold used by actual scientists, meaning there's only a 0.84% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
 
 I also controlled for broad market movements by subtracting SPY's return over the same 5-day window from each trade's return, to check whether the signal was simply a result of beta exposure to general market recoveries:
 
 ```
-Mean raw return:        1.96%
+Mean raw return: 2.00%
 Mean SPY (same window): 0.54%
-Mean excess return:     1.42%
+Mean excess return: 1.46%
 ```
 
 The excess return surviving SPY adjustment confirms there's genuine alpha beyond just riding broad market bounces.
@@ -75,14 +75,14 @@ Using the statistical results, I modelled a simple rules-based strategy:
 **Trade metrics:**
 
 ```
-Win rate:                 58.5%
-Avg win:                  +6.77%
-Avg loss:                 -4.81%
-Largest gain:             +39.41%
-Largest loss:             -19.55%
-Expected value / trade:   1.96%
-Half Kelly sizing:        3.0% of portfolio per trade
-Projected yearly return:  14.5%
+Win rate: 58.9%
+Avg win: +6.77%
+Avg loss: -4.81%
+Largest gain: +39.41%
+Largest loss: -19.55%
+Expected value / trade: 2.00%
+Half Kelly sizing (recommended): 3.1% of portfolio per trade
+Expected Yearly Gain on Strategy: 15.3%
 ```
 
 At a 3% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with multiple 10% drops within a single week. The projected 14.5% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 11-12%, but a little higher when using zero-commission brokers like Wealthsimple.
