@@ -87,6 +87,10 @@ Projected yearly return:  14.5%
 
 At a 3% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with multiple 10% drops within a single week. The projected 14.5% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 11-12%, but a little higher when using zero-commission brokers like Wealthsimple.
 
+---
+
+## Further Reflection
+
 How much you make from using this signal really depends on your position sizing. This last year has been crazy, and the market's moved similarly to a rocketship (+30%). Apart from the drop in March, it has pretty much only gone up. As a result, if your portfolio is held in cash most of the time (like with the half Kelly sizing), your return will not be able to match the S&P. In a different backtest, I modelled the strategy with a 20% position sizing for each trade. It returned 75.7% with a 2.17 Sharpe. 
 
 The reason I used (and recommend using) the half Kelly sizing was to ward against sudden major geopolitical events like the 2020 COVID crash that could wipe out the portfolio. If one were to seek out the gains provided from using a 20% position sizing, I would highly recommend not putting more than 60-70% of your portfolio in the market at any given time. I'd also use a sector cap, so that if 3 different banks fell 10% in one day, I'd only buy one of them.  
