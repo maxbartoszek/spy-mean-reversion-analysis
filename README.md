@@ -60,7 +60,7 @@ Mean SPY (same window): 0.54%
 Mean excess return: 1.46%
 ```
 
-The excess return surviving SPY adjustment confirms there's genuine alpha beyond just riding broad market bounces.
+The excess return surviving SPY adjustment suggests there's genuine alpha beyond just riding broad market bounces.
 
 ---
 
@@ -91,7 +91,7 @@ At a 3.1% position size, you can hold up to 33 concurrent positions, which means
 
 ## Further Reflection
 
-How much you make from using this signal really depends on your position sizing. This last year has been crazy, and the market's moved similarly to a rocketship (+30%). Apart from the drop in March, it has pretty much only gone up. As a result, if your portfolio is held in cash most of the time (like with the half Kelly sizing), your return will not be able to match the S&P. In a different backtest, I modelled the strategy with a 20% position sizing for each trade. It returned 75.7% with a 2.17 Sharpe. 
+How much you make from using this signal really depends on your position sizing. This last year has been crazy, and the market's moved similarly to a rocketship (+30%). Apart from the drop in March, it has pretty much only gone up. As a result, if your portfolio is held in cash most of the time (like with the half Kelly sizing), your return will not be able to match the S&P. In a different backtest, I modelled the strategy with an arbitrarily chosen 20% position sizing for each trade. It returned 75.7% with a 2.17 Sharpe. 
 
 The reason I used (and recommend using) the half Kelly sizing was to ward against sudden major geopolitical events like the 2020 COVID crash that could wipe out the portfolio. If one were to seek out the gains provided from using a 20% position sizing, I would highly recommend not putting more than 60-70% of your portfolio in the market at any given time. I'd also use a sector cap, so that if 3 different banks fell 10% in one day, I'd only buy one of them.  
 
