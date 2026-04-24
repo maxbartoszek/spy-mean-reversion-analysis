@@ -52,7 +52,7 @@ p-value = 0.0119
 
 The p-value of 0.0119 is well below the standard 0.05 significance threshold used by actual scientists, meaning there's roughly only a 1.2% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
 
-I also controlled for broad market movements by subtracting SPY's return over the same 5-day window from each trade's return, to check whether the signal was simple a result of beta exposure to general market recoveries:
+I also controlled for broad market movements by subtracting SPY's return over the same 5-day window from each trade's return, to check whether the signal was simply a result of beta exposure to general market recoveries:
 
 ```
 Mean raw return:        1.96%
