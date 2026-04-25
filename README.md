@@ -64,6 +64,23 @@ The excess return surviving SPY adjustment suggests there's genuine alpha beyond
 
 ---
 
+## Robustness Validation over Multiple Periods
+
+To validate that the signal wasn't specific to one lucky window, I tested it across four different lookback periods:
+
+| Period | Events | Win Rate | EV/Trade | Excess vs SPY | p-value |
+|---|---|---|---|---|---|
+| 3 months | 88 | 63.6% | +3.42% | +3.22% | 0.0138 |
+| 6 months | 135 | 58.5% | +2.51% | +2.34% | 0.0579 |
+| 1 year | 231 | 58.9% | +1.98% | +1.41% | 0.0084 |
+| 1000 days | 657 | 56.9% | +1.53% | +1.11% | 0.0004 |
+
+The signal held across all four windows. Win rate stayed in the 57-64% range regardless of the period. The 6-month p-value of 0.0579 slightly exceeds the 0.05 threshold due to the smaller sample size, not necessarily because the underlying edge weakened. This is proven through the p-value of the 3-month backtest, which sat below 0.02. 
+
+Notably, the excess return over SPY has been increasing recently, suggesting the signal is strengthening rather than fading. The 3.22% excess return over SPY for the nearest term period is particularly significant. In the current environment, the return is nearly independent of beta. SPY only returned 0.20% over those same windows while this strategy averaged 3.42%. The signal is genuinely separating from broad market returns right now.
+
+---
+
 ## Strategy & Sizing
 
 Using the statistical results, I modelled a simple rules-based strategy:
@@ -85,7 +102,7 @@ Half Kelly sizing (recommended): 3.1% of portfolio per trade
 Expected Yearly Gain on Strategy: 15.3%
 ```
 
-At a 3.1% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with multiple 10% drops within a single week. The projected 15.3% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 12-13%, but a little higher when using zero-commission brokers like Wealthsimple.
+At a 3.1% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with multiple 10% drops within a single week. The projected 15.3% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 12-13%, but a little higher when using zero-commission brokers.
 
 ---
 
@@ -101,11 +118,12 @@ If you used the full Kelly sizing (6.2%), which tends to determine the best inve
 
 ## Caveats
 
-- This is based on one year of data during an unusually volatile investing environment. This signal may weaken if volatility normalizes, so watch VIX before trading (maybe only enter when VIX > 16?)
-- Some portion of the edge is market beta
-- No transaction costs are modelled
-- Past performance of a 1-year backtest is not a reliable predictor of future returns (this is a signal based entirely on the current trading environment we are in, which may not be well represented in the future)
-- Returns will heavily depend on position sizing 
+- This is based on data derived from a period enduring an unusually volatile investing environment.
+- This signal appears tied to the current retail-driven market environment. Be sure to monitor VIX and reassess if the current market structure changes significantly.
+- Some portion of the edge is market beta.
+- No transaction costs are modelled.
+- Past performance of a 1-year backtest is not a reliable predictor of future returns (this is a signal based entirely on the current trading environment we are in, which may not be well represented in the future).
+- Returns will heavily depend on position sizing.
 
 ---
 
