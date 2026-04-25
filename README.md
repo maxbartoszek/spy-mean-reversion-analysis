@@ -73,9 +73,9 @@ To validate that the signal wasn't specific to one lucky window, I tested it acr
 | 1 year | 231 | 58.9% | +1.98% | +1.41% | 0.0084 |
 | 1000 days | 657 | 56.9% | +1.53% | +1.11% | 0.0004 |
 
-The signal held across all four windows. Win rate stayed in the 57-64% range regardless of the period. The 6-month p-value of 0.0579 slightly exceeds the 0.05 threshold due to the smaller sample size, not necessarily because the underlying edge weakened. This is proven through the p-value of the 3-month backtest, which sat below 0.02. 
+The signal held across all four windows. Win rate stayed in the 57-64% range regardless of the period. The 6-month p-value of 0.0579 slightly exceeded the 0.05 threshold due to the smaller sample size, not necessarily because the underlying edge weakened. The p-value of the 3-month backtest sat below 0.02 and had an even smaller sample size, proving the edge is growing. 
 
-Notably, the excess return over SPY has been increasing recently, suggesting the signal is strengthening rather than fading. The 3.22% excess return over SPY for the nearest term period is particularly significant. In the current environment, the return is nearly independent of beta. SPY only returned 0.20% over those same windows while this strategy averaged 3.42%. The signal is genuinely separating from broad market returns right now.
+Moreover, the excess return over SPY has been increasing recently, adding to the idea that the signal is strengthening rather than fading. The 3.22% excess return over SPY for the nearest term period is particularly significant. In the current environment, the return is nearly independent of beta. SPY only returned 0.20% over those same windows while this strategy averaged 3.42%. The signal is genuinely separating from broad market returns right now.
 
 ---
 
@@ -85,7 +85,7 @@ Using the statistical results, I modelled a simple rules-based strategy:
 
 - **Entry:** Buy at the close on any day a S&P 500 stock drops 10%+
 - **Exit:** Sell at the close 5 trading days later, no exceptions
-- **Sizing:** Half Kelly Criterion based on observed win/loss profile
+- **Sizing:** Half Kelly Criterion based on the observed win/loss profile
 
 **Trade metrics:**
 
@@ -100,17 +100,19 @@ Half Kelly sizing (recommended): 3.1% of portfolio per trade
 Expected Yearly Gain on Strategy: 15.3%
 ```
 
-At a 3.1% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with multiple 10% drops within a single week. The projected 15.3% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 12-13%, but a little higher when using zero-commission brokers.
+At a 3.1% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with many 10% drops within a single week. The projected 15.3% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 12-13%, but a little higher when using zero-commission brokers.
 
 ---
 
 ## Further Reflection
 
-How much you make from using this signal really depends on your position sizing. This last year has been crazy, and the market's moved similarly to a rocketship (+30%). Apart from the drop in March, it has pretty much only gone up. As a result, if your portfolio is held in cash most of the time (like with the half Kelly sizing), your return will not be able to match the S&P. In a different backtest, I modelled the strategy with an arbitrarily chosen 20% position sizing for each trade. It returned 75.7% with a 2.17 Sharpe. 
+How much you make from using this signal really depends on your position sizing. This last year has been crazy, and the market's moved similarly to a rocketship (+30%). Apart from the drop in March, it has only gone up. As a result, if your portfolio is held in cash most of the time (like with the half Kelly sizing), your return will not be able to match the S&P. In a different backtest, I modelled the strategy with an arbitrarily chosen 20% position sizing for each trade. It returned 75.7% with a 2.17 Sharpe. 
 
-The reason I used (and recommend using) the half Kelly sizing was to ward against sudden major geopolitical events like the 2020 COVID crash that could wipe out the portfolio. If one were to seek out the gains provided from using a 20% position sizing, I would highly recommend not putting more than 60-70% of your portfolio in the market at any given time. I'd also use a sector cap, so that if 3 different banks fell 10% in one day, I'd only buy one of them.  
+The reason I used (and recommend using) the half Kelly sizing was to ward against sudden major geopolitical events like the 2020 COVID crash that could wipe out the portfolio. If one were to seek out the gains provided from using a 20% position sizing, I would highly recommend keeping 30-40% of your portfolio in cash at all times and using a sector cap.  
 
-If you used the full Kelly sizing (6.2%), which tends to determine the best investment size to maximize long-term growth, you would have returned 33% and a 1.94 Sharpe, barely beating out the S&P 500. Your returns entirely depend on how much risk you'd like to take on and how much longer you think the current investing environment will remain. 
+If you used the full Kelly sizing (6.2%), which tends to determine the best investment size to maximize long-term growth, you would have returned 33% and a 1.94 Sharpe, barely beating out the S&P 500. 
+
+Your returns entirely depend on how much risk you're willing to take on and how much longer you think the current investing environment will remain. 
 
 ---
 
