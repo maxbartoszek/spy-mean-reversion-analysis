@@ -35,6 +35,8 @@ After a 10%+ drop, stocks went up **58.5% of the time** over the following week,
 
 My first instinct was that this was being driven by a specific sector. I tested Financials, Energy, Industrials, Consumer Staples, Healthcare, and Technology, looking for the group that was pulling the aggregate number so close to 60%. I even tested other indexes like QQQ and VTI. I couldn't isolate a single clear culprit. The effect appears to be broadly based across the market rather than concentrated in one sector, which actually strengthens the case that it's a market-wide behavioural phenomenon rather than a sector-specific issue.
 
+On a side note, if anyone wants something cool to look into, of the Industrial stocks across the S&P 500, 400, and 600, there were 238 large gains in the past year. Of these, 57.1% went up over the next week with a **4.28%** average return. This momentum effect is likely what I'll be researching next.
+
 ---
 
 ## Statistical Validation
@@ -73,7 +75,7 @@ To validate that the signal wasn't specific to one lucky window, I tested it acr
 | 1 year | 231 | 58.9% | +1.98% | +1.41% | 0.0084 | 0.0001 |
 | 1000 days | 657 | 56.9% | +1.53% | +1.11% | 0.0004 | <0.0001 |
 
-The signal held across all four windows. Win rate stayed in the 57-64% range regardless of the period. The 6-month p-value of 0.0579 slightly exceeded the 0.05 threshold due to the smaller sample size, not necessarily because the underlying edge weakened. The p-value of the 3-month backtest sat below 0.02 and had an even smaller sample size, proving the edge is growing. 
+The signal held across all four windows. Win rate stayed in the 57-64% range regardless of the period. The 6-month p-value of 0.0579 slightly exceeded the 0.05 threshold due to the smaller sample size, not necessarily because the underlying edge weakened. The p-value of the 3-month backtest sat below 0.02 and had an even smaller sample size, supporting the idea that the edge is growing. 
 
 The t-test confirms that the magnitude of returns is statistically significant across every single period tested, including the 6-month window where the binomial test slightly missed the 0.05 threshold. Together, the two tests validate both aspects of the signal independently. Stocks go up more often than chance after a 10%+ drop, and the average return itself is meaningfully above zero. Both findings hold across all four time periods.
 
