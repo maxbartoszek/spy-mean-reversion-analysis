@@ -101,7 +101,7 @@ If you used the full Kelly sizing (6.2%), which tends to determine the best inve
 
 ## Caveats
 
-- This is based on one year of data during an unusually volatile investing environment. This signal may (and likely will) weaken if volatility normalizes, so watch VIX before trading (maybe only enter when VIX > 16?)
+- This is based on one year of data during an unusually volatile investing environment. This signal may weaken if volatility normalizes, so watch VIX before trading (maybe only enter when VIX > 16?)
 - Some portion of the edge is market beta
 - No transaction costs are modelled
 - Past performance of a 1-year backtest is not a reliable predictor of future returns (this is a signal based entirely on the current trading environment we are in, which may not be well represented in the future)
