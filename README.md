@@ -35,8 +35,6 @@ After a 10%+ drop, stocks went up **58.9% of the time** over the following week,
 
 My first instinct was that this was being driven by a specific sector. I tested Financials, Energy, Industrials, Consumer Staples, Healthcare, and Technology, looking for the group that was pulling the aggregate number so close to 60%. I even tested other indexes like QQQ and VTI. I couldn't isolate a single clear culprit. The effect appears to be broadly based across the market rather than concentrated in one sector, which actually strengthens the case that it's a market-wide behavioural phenomenon rather than a sector-specific issue.
 
-By the way, if anyone wants something cool to look into, I found that of the Industrial stocks in the S&P500, S&P600 small caps, and S&P400 mid caps, there were 238 large gains in the past year. Of these, 57.1% went up over the next week with a **4.28% average return**. This momentum is likely what I'll be looking into next, honestly.
-
 ---
 
 ## Statistical Validation
@@ -50,7 +48,7 @@ p-value = 0.0084
 95% CI = [0.522, 0.653]
 ```
 
-The p-value of 0.0084 is well below the standard 0.05 significance threshold used by actual scientists, meaning there's only a 0.84% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
+The p-value of 0.0084 is well below the standard 0.05 significance threshold commonly used by scientists, meaning there's only a 0.84% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
 
 I also controlled for broad market movements by subtracting SPY's return over the same 5-day window from each trade's return, to check whether the signal was simply a result of beta exposure to general market recoveries:
 
