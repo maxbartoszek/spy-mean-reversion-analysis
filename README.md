@@ -92,17 +92,17 @@ Using the statistical results, I modelled a simple rules-based strategy:
 **Trade metrics:**
 
 ```
-Win rate: 58.9%
-Avg win: +6.77%
+Win rate: 58.5%
+Avg win: +6.81%
 Avg loss: -4.81%
 Largest gain: +39.41%
 Largest loss: -19.55%
-Expected value / trade: 2.00%
-Half Kelly sizing (recommended): 3.1% of portfolio per trade
-Expected Yearly Gain on Strategy: 15.3%
+Expected value / trade: 1.99%
+Half Kelly sizing (recommended): 3.0% of portfolio per trade
+Expected Yearly Gain on Strategy: 14.8%
 ```
 
-At a 3.1% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with many 10% drops within a single week. The projected 15.3% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 12-13%, but a little higher when using zero-commission brokers.
+At a 3.0% position size, you can hold up to 33 concurrent positions, which means you should be able to take every position the signal provides, even with many 10% drops within a single week. The projected 14.8% annual return assumes every qualifying trade is taken and does not account for transaction costs, slippage, or bid-ask spread, so real-world returns would be modestly lower, likely closer to 12-13%, but a little higher when using zero-commission brokers.
 
 ---
 
