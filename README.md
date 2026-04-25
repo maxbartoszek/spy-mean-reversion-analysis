@@ -112,7 +112,7 @@ How much you make from using this signal really depends on your position sizing.
 
 The reason I used (and recommend using) the half Kelly sizing was to ward against sudden major geopolitical events like the 2020 COVID crash that could wipe out the portfolio. If one were to seek out the gains provided from using a 20% position sizing, I would highly recommend keeping 30-40% of your portfolio in cash at all times and using a sector cap.  
 
-Using the full Kelly sizing (6.2%), which tends to determine the best investment size to maximize long-term growth, the Claude-generated backtest returned 25.9% with a 1.55 Sharpe. 
+Using the full Kelly sizing (6.0%), which tends to determine the best investment size to maximize long-term growth, the Claude-generated backtest returned 25.9% with a 1.55 Sharpe. 
 
 Your returns entirely depend on how much risk you're willing to take on and how much longer you think the current investing environment will remain. 
 
