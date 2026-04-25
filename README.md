@@ -24,10 +24,10 @@ I pulled all the stocks in the S&P 500 and downloaded one year of daily price da
 
 | Event | Next Day (avg) | Next Day (up %) | Next Week (avg) | Next Week (up %) |
 |---|---|---|---|---|
-| 10%+ Gain | +0.58% | 52.2% | +1.47% | 55.1% |
-| 10%+ Drop | +0.81% | 56.7% | +2.00% | 58.9% |
+| 10%+ Gain | +0.58% | 52.2% | +1.46% | 54.9% |
+| 10%+ Drop | +0.83% | 56.8% | +1.99% | 58.5% |
 
-After a 10%+ drop, stocks went up **58.9% of the time** over the following week, with a mean return of 2.00%. That fact was my core finding.
+After a 10%+ drop, stocks went up **58.5% of the time** over the following week, with a mean return of 1.99%. That fact was my core finding.
 
 ---
 
