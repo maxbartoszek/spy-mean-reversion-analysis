@@ -136,4 +136,4 @@ Your returns entirely depend on how much risk you're willing to take on and how 
 - `pandas`, `numpy` — data processing
 - `scipy.stats` — statistical testing
 - `matplotlib` — visualizations
-- `Claude` — providing a quick backtest
+- Claude — providing a quick backtest
