@@ -1,5 +1,9 @@
 # S&P 500 Mean Reversion Strategy on Large Stock Movements
 
+**Research completed April 26, 2026**
+
+---
+
 ## Background
 
 I've been investing and trading for a while now, and something I started noticing this year was that there seemed to be a lot more significant single-day moves of 10%+ than I'd ever seen before. The markets feel *different*. It's like they're more reactive with stocks swinging wildly on news that in previous years might have caused a 4-5% move at most.
