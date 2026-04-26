@@ -134,8 +134,8 @@ Your returns entirely depend on how much risk you're willing to take on and how 
 ## Stack
 
 - Python, Jupyter Notebook
-- `yfinance` — price data
-- `pandas`, `numpy` — data processing
-- `scipy.stats` — statistical testing
-- `matplotlib` — visualizations
-- Claude — providing a quick backtest
+- `yfinance` - price data
+- `pandas`, `numpy` - data processing
+- `scipy.stats` - statistical testing
+- `matplotlib` - visualizations
+- Claude - providing a quick backtest
