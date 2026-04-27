@@ -28,7 +28,7 @@ I pulled all the stocks in the S&P 500 and downloaded one year of daily price da
 
 | Event | Next Day (avg) | Next Day (up %) | Next Week (avg) | Next Week (up %) |
 |---|---|---|---|---|
-| 10%+ Gain | +0.58% | 52.2% | +1.46% | 54.9% |
+| 10%+ Gain | +0.58% | 52.0% | +1.46% | 54.9% |
 | 10%+ Drop | +0.83% | 56.8% | +1.99% | 58.5% |
 
 After a 10%+ drop, stocks went up **58.5% of the time** over the following week, with a mean return of 1.99%. That fact was my core finding.
@@ -48,20 +48,20 @@ On a side note, if anyone wants something cool to look into, of the Industrial s
 Before treating this as a tradeable signal, I needed to confirm it wasn't just luck. I ran a binomial test against a null hypothesis of 50%:
 
 ```
-n = 231 drop events
-Up = 136 (58.9%)
-p-value = 0.0084  
-95% CI = [0.522, 0.653]
+n = 229 drop events
+Up = 134 (58.5%)
+p=0.0119
+95% CI: [0.518, 0.650]
 ```
 
-The p-value of 0.0084 is well below the standard 0.05 significance threshold commonly used by scientists, meaning there's only a 0.84% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
+The p-value of 0.0119 is well below the standard 0.05 significance threshold commonly used by scientists, meaning there's only a 1.19% chance this result occurred by random chance. The entire confidence interval sits above 50%, confirming the edge is real even in a conservative case.
 
 I also controlled for broad market movements by subtracting SPY's return over the same 5-day window from each trade's return, to check whether the signal was simply a result of beta exposure to general market recoveries:
 
 ```
-Mean raw return: 2.00%
+Mean raw return: 1.99%
 Mean SPY (same window): 0.54%
-Mean excess return: 1.46%
+Mean excess return: 1.45%
 ```
 
 The excess return surviving SPY adjustment suggests there's genuine alpha beyond just riding broad market bounces.
@@ -76,7 +76,7 @@ To validate that the signal wasn't specific to one lucky window, I tested it acr
 |---|---|---|---|---|---|---|
 | 3 months | 88 | 63.6% | +3.42% | +3.22% | 0.0138 | 0.0001 |
 | 6 months | 135 | 58.5% | +2.51% | +2.34% | 0.0579 | 0.0009 |
-| 1 year | 231 | 58.9% | +1.98% | +1.41% | 0.0084 | 0.0001 |
+| 1 year | 232 | 58.5% | +1.99% | +1.45% | 0.0119 | 0.0001 |
 | 1000 days | 657 | 56.9% | +1.53% | +1.11% | 0.0004 | <0.0001 |
 
 The signal held across all four windows. Win rate stayed in the 57-64% range regardless of the period. The 6-month p-value of 0.0579 slightly exceeded the 0.05 threshold due to the smaller sample size, not necessarily because the underlying edge weakened. The p-value of the 3-month backtest sat below 0.02 and had an even smaller sample size, supporting the idea that the edge is growing. 
